@@ -1,0 +1,64 @@
+1. Conditional statements are used to check conditions and execute 
+	respective block of statements
+
+2. Types of conditional statements in PHP
+	a. if
+	b. if-else
+	c. if - else if - else
+	d. nested if
+	e. swith
+
+3. if - statements in if will only executes when condition is true
+
+	example
+
+	<?php
+		if(100 > 20){
+			echo "Hello" ;
+		}	
+	?>
+
+4.if - else - statements in if will only executes when condition 
+	is true otherwise statements in else will executes
+
+	example - 
+
+	<?php
+		if(100 < 20){
+			echo "Hello" ;
+		}else{
+			echo "Hi" ;
+		}
+	?>
+
+5. if - else if - else statements in if will only executes when condition 
+	is true otherwise if statements in else if will 
+	exectutes otherwise statements in else block will 
+	gets executes
+
+	example
+
+	<?php
+
+		if(100 < 10){
+			echo "Hi" ;
+		}else if(100 > 10){
+			echo "Hello" ;
+		}else{
+			echo "Good Morning" ;
+		}
+	?>
+
+6. switch
+	switch statement will check sevral case and 
+	executes block of code matching case
+	
+	example
+
+	switch(10){
+
+		case 10 :
+		echo "ten" ;
+		break; 
+	}
+

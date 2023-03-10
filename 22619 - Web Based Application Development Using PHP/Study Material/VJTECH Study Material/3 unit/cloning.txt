@@ -1,0 +1,29 @@
+1. Cloning object means creating copy of object
+
+2. In PHP There are 2 types of object cloning  
+
+    a. Shallow copy
+    b. Deep copy
+
+3. example
+
+    <?php
+        class A{
+            public $a = 10 ;
+            public $b = 20 ;
+            function disp(){
+                echo "a : {$this -> a} <br>" ;
+                echo "b : {$this -> b} <br>" ;
+            }
+        }
+        $c = new A() ; 
+        $c -> disp() ;
+        $d = $c ; // deep copy
+        $e = clone $c ; //Shallow copy
+        $d -> a = 20 ;
+        $c -> disp() ;
+        $e -> disp() ;
+        $e -> a = 50 ;
+        $c -> disp() ;
+        $e -> disp() ;
+    ?>

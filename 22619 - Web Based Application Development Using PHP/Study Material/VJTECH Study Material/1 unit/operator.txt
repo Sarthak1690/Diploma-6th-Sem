@@ -1,0 +1,71 @@
+1. Operator are used to perform operations on variables and values
+
+2. Types of operator in PHP
+
+	a. Arithmetic Operator
+	b. Assignment Operator
+	c. Comparision Operator
+	d. Increment / Decrement Operator
+	e. Logical Operator
+	f. String Operator
+	g. Array Operator
+
+3. Arithemtic Operator - Arithmetic Operator are used to perform 
+	mathematical operation on numbers
+
+	+ (Addition)
+	- (Subtraction)
+	* (Multiplication)
+	/ (Division)
+	% (Modulus)
+	** (Exponent)
+
+4. Assignment Operator - Assignment Operator are used to assign 
+	value to variable
+
+	= (Assignment)
+	+= (Addtion and Assignment)
+	-= (Substraction and Assignment)
+	/= (Division and Assignment)
+	*= (Multiplication and Assignment)
+
+5. Comparision Operator - Comparision Operator are used to compare 
+	two values
+
+	== (Equal to)
+	=== (Identical)
+	!= (Not equal to)
+	> (Greater than)
+	< (Less than)
+	>= (Greater than equal to)
+	<= (Less than equal to)
+	
+6. Increament / Decrement Operator
+
+	++$x (Pre-increment)
+	$x++ (Post-increment)
+	--$x (Pre-decreament)
+	$x-- (Post-decreament)
+
+7. Logical Operator
+
+	&& (and)
+	|| (or)
+	! (not)
+
+8. String Operator
+
+	. (Concatination)
+	.= (Concatination assignment)
+
+9. Array Operator
+
+	+ (Union)
+	== (Equality)
+	=== (Identical)
+	!= (Inequality)
+	!== (Non - identical)
+	
+	
+
+	

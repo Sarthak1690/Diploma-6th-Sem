@@ -1,0 +1,70 @@
+1. Cookie is a small file of data which is stored on users computer
+
+2. Cookie is used to identify user
+
+3. In PHP you can create and retrive cookies
+
+4. create cookie
+
+	IN PHP setcookie() function is used to set cookie
+
+	syntax
+	
+	setcookie(name , value , expire , path , domain , secure , httponly)
+
+	parameter
+
+	name - Requried. Specifies key of cookie
+	value - Optional. Specifies value of cookie
+	expire - Optional. Specifies expiry time of cookie in seconds
+	path - Optional. Specifies server path of cookie
+	domain - Optional. Specifies domain name of cookie
+	secure - Optional. Specifies where cookie should trasmitted over https protocol only
+	httponly - Optional. Specifies where to access cookie(http or https)
+
+	return value
+		returns true on success and false on failure
+
+	example - 
+
+	<?php
+
+		setcookie('xyz' , '66') ;
+	?>
+
+4. retrive cookie
+
+	$_COOKIE[] is a global variable that contains all cookies in the form of associative array
+	$_COOKIE[] is used to get value of cookie
+
+	<?php
+		setcookie('name' , 'xyz') ;
+		echo $_COOKIE['name'] ;
+	?>
+
+5. modify cookie
+
+	to modify value of cookie set new cookie with setcookie() function with same name as existing cookie and different value
+	
+	example
+
+	<?php
+		setcookie('name' , 'xyz') ;
+		echo $_COOKIE['name']."<br>" ;
+		setcookie('name' , 'abc') ;
+		echo $_COOKIE['name'] ;
+	?>
+
+6. delete cookie
+
+	to delete cookie set cookie with past expiration time
+
+	example -
+
+	<?php
+	
+		setcookie('name' , 'xyz' , time() - 64000) ;
+
+	?>
+	
+	

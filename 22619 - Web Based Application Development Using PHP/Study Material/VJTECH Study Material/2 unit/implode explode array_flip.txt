@@ -1,0 +1,62 @@
+1. implode() -
+
+	1. The implode() function returns a string form elements of an array
+	2. syntax - 
+		implode(separator , array)
+	3. Parameter -
+		separator - Optional. Specifies what to put between array elements.Default is empty string("")
+		array - Required. The array to join to string
+	4. return value
+		Returns a string from elements of an array
+	5. implode() function accepts its parameters in any order
+	6. implode() function is binary safe
+	7. example -
+		<?php
+			$arr = array("Hello" , "World") ;
+			$str = implode(" " , $arr) ;
+			echo $str ;
+		?>
+
+2. explode() -
+
+	1. The explode() function breaks a string into an array.
+	2. syntax -
+		explode(separator , string , limit)
+	3. Parameter -
+		separator - Required. Specifies where to break string
+		string - Required. The string to split
+		limit - Specifies number of array elements to return default value is lenght of array
+		Possible values
+			1. Greater than 0 - returns array with maximum of limit element
+			2. Less than 0 - returns array except for last limit element
+			3. 0 - returns array with one element
+	4. return value
+		Returns an array of strings
+	5. In implode() separator parameter cannt be empty
+	6. implode() function is binary safe
+	7. example -
+		<?php
+			$str = "one,two" ;
+			print_r(explode("," , $str)) ;
+			echo "<br>" ;
+			print_r(explode("," , $str , 0)) ;
+			echo "<br>" ;
+			print_r(explode("," , $str , 2)) ;
+			echo "<br>" ;
+			print_r(explode("," , $str , -1)) ;
+		?>
+
+3. array_flip()
+
+	1. array_flip() flips keys with their associative values
+	2. syntax -
+		arra_flip(array)
+	3. parameter
+		array - Required. Specifies array of key and value pairs to be fliped
+	4. return value
+		returns flip array on success and NULL on failure
+	5. example -
+		<?php
+			$arr = array(1 ,2) ;
+			print_r(array_flip($arr)); 
+		?>

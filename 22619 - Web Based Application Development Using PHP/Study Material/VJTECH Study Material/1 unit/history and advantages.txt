@@ -1,0 +1,22 @@
+1. PHP stands for PHP : Hypertext Preprocessor.
+
+2. PHP was developed in 1994 by Rasmus Lerdorf.
+
+3. Advantages of PHP
+	a. Platform independent
+	b. Open source
+	c. Stable
+	d. Database connection
+	e. Flexible
+
+4. Disadvantage of PHP
+	a. Security issue
+	b. Poor performance
+	c. Poor framework
+	d. Handling Error
+
+5. Application of PHP
+	a. Data retrive from SQL Database
+	b. Create charts and other graphics
+	c. Web based application
+	d. eCommerec application

@@ -1,0 +1,53 @@
+1. In PHP loops are used to execute same block of code repeatitively
+
+2. Types of loops in PHP
+
+	a. for loop
+	b. while loop
+	c. do..while loop
+	d. foreach loop
+
+3. for loop - loops through block of code util specified condtion
+
+	example - 
+
+	<?php
+
+		for($i=0 ; $i < 5 ; $i++) {
+			echo $i ;
+		}
+	?>
+
+4. while loop - loops through block of code until condition is true
+	
+	example
+	
+	<?php
+		$i = 0 ;
+		while($i != 5){
+			echo $i ;
+			$i++ ;
+		}
+	?>
+
+5. do..while loop - loops through block of code once and repeats until condition is true
+
+	example
+
+	<?php
+		$i = 0 ;
+		do{
+			echo $i ;
+		}while($i != 5) ;
+	?>
+
+6. foreach loop - loops through each element of specified array
+
+	example - 
+
+	<?php
+		$arr = array(1 ,2 ,3 ,4 ,5) ;
+		foreach($arr as $a){
+			echo $a ;
+		}
+	?>

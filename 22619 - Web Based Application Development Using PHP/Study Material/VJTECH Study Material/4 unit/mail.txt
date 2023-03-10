@@ -1,0 +1,24 @@
+1. In PHP mail() function is used to send email
+
+2. syntax
+
+	mail(to, subject, message, header, parameters)
+
+2. parameter
+
+	to - Required. Specifies receiver / receivers email
+	subject - Required. Specifies subject of email.It cannot contain any newline character
+	message - Required. Specifies message to be send in email.It may contain newline characters but 
+		70 characters is maximum limit
+	headers - Optional. Specifies additional headers like Cc and Bcc
+	paramerters - Optional. Specifies additional paramerters to sendemail program
+
+3. return value 
+	returns hash value of address program and False on failure
+	
+4. example - 
+	<?php
+
+		mail('xyz123@gmail.com' , 'about exam' , 'hello sir , \nhow are you?') ;	
+	
+	?>

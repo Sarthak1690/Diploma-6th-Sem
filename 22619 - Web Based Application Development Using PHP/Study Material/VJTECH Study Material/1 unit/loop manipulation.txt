@@ -1,0 +1,30 @@
+Break
+
+1. break statement is used to jump out of loop
+
+2. example
+
+	<?php
+
+	for($i = 0 ; $i <= 5 ; $i++){
+
+		if($i == 3){
+			break ;
+		}
+	}
+	?>
+
+
+Continue
+
+1. continue statement breaks one iteration of loop
+
+	
+2. example
+	<?php
+		for($i = 0 ; $i <= 5 ; $i++){
+			if($i == 3){
+				continue;
+			}
+		}
+	?>

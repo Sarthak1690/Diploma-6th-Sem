@@ -1,0 +1,29 @@
+1. PHP supports 8 primitive data types that can be divided in 3 types
+
+	a. Scaler Type
+	b. Compound Type
+	c. Special Type
+
+2. Data Type : Scaler Type - It holds only single value
+	
+	There are 4 scaler data types in PHP
+
+	a. boolean
+	b. integer
+	c. float
+	d. string
+
+3. Data Type : Compund Type - It holds multiple value
+
+	There are 2 compound data types in PHP
+
+	a. array 
+	b. object
+
+4. Data Type : Special Type
+
+	There are 2 special data types in PHP
+
+	a. resource 
+	b. null
+

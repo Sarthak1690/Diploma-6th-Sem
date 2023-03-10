@@ -1,0 +1,89 @@
+1. serialization of object means converting object to byte stream representation that 
+    can be stored into memory , database or file.
+
+2. PHP provides function to perform serialization :
+
+    a. serialize()
+    b. unserialize()
+
+3. serialize() - converts value to sequence of bits
+
+    a. syntax
+
+        serialize(value)
+
+    b. parameter
+
+        value - Required. Specifies value to be serialize
+
+    c. return value
+
+        strings conatining byte stream represenatation of value
+
+    d. example
+
+        <?php
+        
+            $arr = array('name' => 'xyz' , 'roll' => '66') ;
+
+            $encode = serialize($arr) ;
+
+            echo $encode ;
+        
+        ?>
+
+
+4. unserialize() - converts sequence of bits to actual value
+
+    a. syntax
+        unserialize(string , options)
+
+    b. parameter
+        string - Required. Specifies serialized string
+        options - Optional. Specifies options to be provided to the function
+
+    c. return value
+        returns converted value. False on failure
+
+    d. example
+
+    <?php
+
+        $arr = array('name' => 'xyz' , 'roll' => '66') ;
+
+        $encode = serialize($arr) ;
+
+        $arr = unserialize($encode) ;
+
+        print_r($arr) ;
+    
+    ?>
+
+5. __sleep() is a magic method of class which gets notified when object is being 
+    serialized
+
+6. __wakeup() is a magic method of class ehich gets notified when object is being 
+    unserialized
+
+7. example
+
+    <?php
+
+        class Student{
+            public $name = 'xyz' ;
+            function __sleep(){
+                echo "sleep method" ."<br>";
+                return array('name') ;
+            }
+
+            function __wakeup(){
+                echo "wakeup" ."<br>";
+            }
+        }
+
+        $s = new Student();
+        $encode = serialize($s) ;
+        echo $encode ."<br>" ;
+        $data = unserialize($encode) ;
+        print_r($data) ;
+?>

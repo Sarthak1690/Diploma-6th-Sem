@@ -1,0 +1,49 @@
+1. In PHP session is used to store and pass information form one page to another temporarily
+
+** PHP session_start()
+
+	a. It is used to start new session or resume existing session
+	syntax
+		bool session_start()
+
+	example
+		<?php
+			session_start() ;
+		?>
+
+** $_SESSION[]
+
+	a. It is associative array that contains all session variable
+	b. It is used to get and set session variable values
+
+	example
+
+	<?php
+		session_start() ;
+		$_SESSION['name'] = 'xyz' ;
+		echo $_SESSION['name'] ; 
+	?>
+
+** destroy session
+
+	a. In PHP session_destroy() function is used to destroy all session variables completely
+
+** example
+
+	session1.php
+
+	<?php
+		session_start() ;
+		$_SESSION['name'] = 'xyz' ;
+	?>
+
+	session2.php
+
+	<?php
+		session_start() ;
+		echo $_SESSION['name'] ;
+		session_destroy() ;
+	?>
+
+
+	

@@ -1,0 +1,41 @@
+1. Function Overriding means both parent and child class should have same method name with 
+    same number of argumnts
+
+2. The purpose of method overriding is to change behaviour of parent class method in 
+    child class
+
+3. example
+
+    <?php
+        class A{
+            function disp(){
+                echo "Parent class" ;
+            }
+        }
+        class B extends A{
+            function disp(){
+                echo "Child class" ;
+            }
+        }
+        $b = new B();
+        $b -> disp() ;
+    ?>
+
+4. If you want to access overrided method in child class use parent keyword
+
+    example
+    <?php
+        class A{
+            function disp(){
+                echo "Parent class" ;
+            }
+        }
+        class B extends A{
+            function disp(){
+                parent :: disp() ;
+                echo "Child class" ;
+            }
+        }
+        $b = new B();
+        $b -> disp() ;
+    ?>

@@ -1,0 +1,86 @@
+1. Function overloading is the ability to create multiple function of same name 
+    with different implementation
+
+2. PHP does not support performing overloading in tradional way
+
+3. Instead PHP provides magic methods to perform overloading in PHP
+
+4. Types of overloading in PHP
+
+    a. Property overloading
+    b. Method overloading
+
+5. Property overloading
+
+    Property overloading is used to create dynamic property in object context
+
+    Magic methods provided by PHP to perform Property Overloading
+
+        a. __set() - triggered while initializing overloaded property 
+        b. __get() - triggered while using overloaded property in any print statement
+        c. __isset() - triggered when isset() function is called
+        d. __unset() - triggered when unset() function is called 
+
+    example
+
+    <?php
+        class GFG {
+            public $data = array();
+            public function __set($name, $value) {
+                $this->data[$name] = $value;
+            }   
+            public function __get($name) {
+                    return $this->data[$name];
+            }
+            public function __isset($name) {
+                return isset($this->data[$name]);
+            }
+            public function __unset($name) {
+                unset($this->data[$name]);
+            }
+        }
+        $obj = new GFG;
+        $obj->a = 1;
+        echo $obj->a . "<br>";
+        var_dump(isset($obj->a));
+        echo "<br>" ;
+        unset($obj->a);
+        var_dump(isset($obj->a));
+    ?>
+
+6. method overloading 
+
+    method overloading is used to create dynamic methods in both object context and 
+    static context
+
+    magic methods provided by PHP to perform method overloading
+
+        a. __call() - triggered while invoking overloaded method in object context
+        b. __callStatic() - triggered while invoking overloaded method in static context
+
+    example - 
+
+    <?php
+    
+        class Overloading{
+            function __call($name , $args){
+                $count = count($args) ;
+                echo "Method $name called with $count arguments <br>" ;
+            }
+
+            function __callStatic($name , $args){
+                $count = count($args) ;
+                echo "Static Method $name called with $count arguments <br>" ;
+            }
+        }
+
+
+        $o = new Overloading() ;
+
+        $o -> area(1) ;
+        $o -> area(1 , 2) ;
+
+        Overloading :: area(1) ;
+        Overloading :: area(1 , 2) ;
+    
+    ?>

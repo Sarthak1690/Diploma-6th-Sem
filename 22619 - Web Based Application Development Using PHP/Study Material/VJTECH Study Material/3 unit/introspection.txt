@@ -1,0 +1,171 @@
+1. Introspection is ability to examine the ability of class, object and interface
+2. functions offered by PHP to perform introspection	
+	a. class_exists()
+	b. interface_exists() 
+	c. method_exists()
+	d. get_class_vars()
+	e. get_class_methods()
+
+3. class_exists() - checks where class has been defined
+	
+	a. syntax - 
+		i. class_exists(className , autoload)
+
+	b. Parameters -
+		i. className − Name of the class.
+		ii. autoload − Whether to call __autoload or not by default
+
+	c. return value
+		i. true if class is defined else false
+
+	d. example
+	<?php
+
+		class Check{
+		}
+		if(class_exists("Check")){
+			echo "class exists" ;
+		}else{
+			echo "class not exists" ;
+		}
+	?>
+
+4. interface_exists() - checks wheter interface has been defined
+
+	a. syntax
+		interface_exists(interfaceName , autoload)
+
+	b. Parameters
+		interfaceName - name of interface	
+		autoload - wheter to call autoload or __autoload by default
+
+	c. return value
+		true if interface is defined else false
+
+	d. example
+
+		<?php	
+			interface Student{
+			}
+
+			if(interface_exists("Student")){
+				echo "interface exists" ;
+			}else{
+				echo "interface not exists" ;
+			}
+		?>
+
+5. method_exists() - checks Whether method is defined or not
+
+	a. syntax
+		method_exists(object / className , methodName)
+
+	b. Parameters
+		object / className - object instance of class or name of class
+		methodName - name of method
+
+	c. return value
+		ture if method exists else false
+
+	d. example
+
+	<?php
+		class Student{
+			function hello(){
+				echo "hello" ;
+			}
+		}	
+
+		if(method_exists("Student" , "hello")){
+			echo "method exists" ;
+		}else{
+			echo "method not exists" ;
+		}
+	?>
+
+6. get_class_vars() 
+
+	gets properties of class
+
+	a. syntax
+		get_class_vars(className)
+
+	b. Parameters
+		className - name of class
+
+	c. return
+		return assosiative array conatining properties of specified class
+
+	d. example
+
+		<?php
+			class Student{
+				public $name = 'xyz' ;
+				public $roll = '66' ;
+				public $dept = 'CO' ;
+			}
+
+			$arr = get_class_vars("Student") ;
+			print_r($arr) ;
+		?>
+
+7. get_class_methods()
+
+	gets methods of class
+
+	a. syntax
+		get_class_methods(className)
+
+	b. Parameter
+		className - name of class
+
+	c. return value
+		return indexed array conatining names of methods in specified class
+
+	d. example
+
+	<?php
+	
+		class Stu{
+			function h1(){}
+			function h2(){}
+			function h3(){}
+			function h4(){}
+		}
+
+		$arr = get_class_methods("Stu") ;
+		print_r($arr) ;
+	?>
+
+
+
+	**** Common Example ****
+
+
+	<?php
+		interface interStudent{}
+		class classStu{
+			public $s1 = 's1' ;
+			public $s2 = 's2' ;
+			public $s3 = 's3' ;
+			function f1(){}
+			function f2(){}
+			function f3(){}
+			function f4(){}
+		}
+		if(class_exists("classStu")){
+			echo "class exists" ;
+		}
+		if(interface_exists("interStudent")){
+			echo "interface exists" ;
+		}
+		if(method_exists("classStu" , "f1")){
+			echo "method exists" ;
+		}
+		$arr = get_class_vars("classStu") ;
+		print_r($arr) ;
+		$arr = get_class_methods("classStu") ;
+		print_r($arr) ;
+	?>
+
+

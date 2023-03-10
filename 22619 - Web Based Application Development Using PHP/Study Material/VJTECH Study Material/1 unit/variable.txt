@@ -1,0 +1,26 @@
+1. Variable is a name which is used to store data
+
+2. In PHP variable is declared using $ symbol
+
+3. PHP is loosely typed lanfuage so we do not need to declare 
+	data type of variable
+
+4. Assignment operators are used to assign value on variable
+
+5. syntax -
+	$variableName = value ;
+
+6. Rules to declare variable
+	a. Variable name must start with letter or underscore(_)
+	b. Variable name can only contain alpha numeric characters 
+	or userscore(_)
+	c. Variable name cannot contain white spaces
+	d. Variable name are case sensative
+
+7. Example
+
+	<?php
+		$i = 10 ;
+		$f = 10.0 ;
+		$s = "ten" ;		
+	?>

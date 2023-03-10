@@ -1,0 +1,41 @@
+** variable function **
+
+    1. If name of variable has parenthesis in front of if. PHP parser tries to find function with same 
+    name as value and executes it such function is known as variable function
+    2. syntax
+
+        function functionName(){
+            //body
+        } 
+
+        $variableName = "functionName" ;
+        $variableName() ;
+    3. example
+
+        <?php
+
+            function hello(){
+                echo "hello" ;
+            }
+
+            $var = "hello" ;
+            $var() ;
+
+        ?>
+
+
+** anonymous function **
+
+    1. A function without any user defined name is known as anonymous function
+    2. anonymous function is also called as closure or lambda function
+    3. syntax
+        $var=function ($arg1, $arg2) { return $val; };
+    4.example
+        <?php
+
+            $var = function () {
+                echo "hello";
+                };
+            $var() ;
+
+        ?>

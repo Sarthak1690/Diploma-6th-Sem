@@ -1,0 +1,56 @@
+function
+    1. function is a block of statements which is exected on call .
+    2. In php , user defined function declaration starts with function
+    3. syntax 
+        function functionName() {
+            //body
+        } 
+    4. function name must start with letter or underscore
+    5. function name are not case sensitive
+    6. example 
+        <?php
+            function hello(){
+                echo "hello" ;
+            }
+        ?>
+    ** Arguments **
+    function allows to pass information as argument 
+    Arguments are passed inside round brackets
+    example
+        <?php
+            function prtMsg($msg){
+                echo $msg ;
+            }
+            prtMsg("Hello") ;
+        ?>
+    ** Default Arguments **
+    If function is called without argument then default argument is taken
+    example 
+        <?php 
+            function defaultArg($msg = "hello"){
+                echo $msg ;
+            }
+            defaultArg();
+        ?>
+    ** return value **
+    return keyword is used to return information from function
+    example
+        <?php 
+            function defaultArg($msg = "hello"){
+                return $msg ;
+            }
+            echo defaultArg() ;
+        ?>
+    ** pass by referance **
+    You can pass argument as referance by specifing & before argument name  
+    example
+        <?php
+            $num = 10 ;
+            function referance(&$val){
+                $val = 5 ;
+            }
+            referance($num) ;
+            echo $num ;
+        
+        ?>
+        

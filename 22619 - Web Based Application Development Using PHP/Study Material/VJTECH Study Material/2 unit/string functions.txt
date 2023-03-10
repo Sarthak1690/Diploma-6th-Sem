@@ -1,0 +1,148 @@
+1. str_word_count()
+
+	1. str_word_count() - counts number of words in string
+	2. syntax -
+		str_word_count(string , return , char)
+	3. parameter -
+		string - Required. specifies string to check
+		return - Optional. specifies return value of str_word_count()
+		possible values -
+			0 - Default. Returns number of word found
+			1 - Reurns array with word found
+		char - Optional. specifies the special character to be considered as word
+	4. return value -
+		return number or array
+	5. example -
+		<?php
+			echo str_word_count("hello world" ,0) ;
+			echo "<br>" ;
+			print_r(str_word_count("hello world" , 1));
+			echo "<br>" ;
+			print_r(str_word_count("hello & world" , 1 , "&"));
+		?>
+
+2. strlen() -
+
+	1. strlen() function counts length of string in bytes
+	2. syntax - 
+		strlen(string)
+	3. parameter
+		string - Required. specifies string to check
+	4. return value -
+		returns the lenght of string in bytes
+	5. example
+		<?php
+			$str = "Hello World" ;
+			echo strlen($str) ;
+		?>
+
+3. strrev() 
+
+	1. strrev() function reverses string
+	2. syntax
+		strrev(string)
+	3. parameter
+		string - Required. specifies string to reverse
+	4. return value
+		returns reversed string
+	5. example
+		<?php
+			echo strrev("Hello") ;
+		?>
+
+4. strpos()
+
+	1. strpos() function finds the position of first occurance of string inside another string
+	2. syntax
+		strpos(string , find , start)
+	3. parameter
+		string - Requried. specifies the string to search
+		find - Required. specifies the string to find
+		start - Optional. specifies where to begin search
+	4. return value
+		returns the position of first occurance of string inside other string or FALSE if string not found
+	5. strpos() function is case sensitive
+	6. strpos() function is binary safe
+	7. example
+		<?php
+			echo strpos("Hello world" , "Hello" , 0) ;
+		?>
+
+5. str_replace() 
+
+	1. str_replace() function replace some character with other character in string
+	2. syntax
+		str_replace(find , replace , string , count)
+	3. parameter
+		find - Requried. specifies the value to find
+		replace - Requried. specifies the value to replace value of find
+		string - Requried. specifies the string to be searched
+		count - Optional. specifies variable to count replacements
+	4. return value
+		returns string or array with replaced value
+	5.example
+		<?php
+			echo str_replace("world" , "xyz" , "hello world" , $c) ;
+			echo "<br>" ;
+			echo $c ;
+		?>
+
+6. ucwords()
+
+	1. The ucwords() function converts first character of each word to uppercase in string
+	2. syntax -
+		ucwords(string , dilimeter)
+	3. parameter -
+		string - Required. specifies string to convert
+		dilimeter - Optional. specifies word separator character
+	4. return value
+		returns converted string
+	5. example
+		<?php
+			echo ucwords("hello|world" , "|") ;
+		?>	
+
+7. strtoupper()
+	
+	1. strtoupper() function converts string to uppercase
+	2. syntax
+		strtoupper(string)
+	3. parameter
+		string - specifies the string to convert
+	4. return values
+		returns the uppercased string
+	5. example
+		<?php
+			echo strtoupper("Hello World") ;
+		?>
+
+8. strtolower()
+	
+	1. strtolower() function converts string to lowercase
+	2. syntax
+		strtolower(string)
+	3. parameter
+		string - specifies the string to convert
+	4. return values
+		returns the lowercased string
+	5. example
+			<?php
+				echo strtolower("Hello World") ;
+			?>
+
+9. strcmp()
+	
+	1. strcmp() function compares to string
+	2. syntax 
+		strcmp(string1 , string2)
+	3. parameter
+		string1 - Requried. specifies first string to compare
+		string2 - Requried. specifies second string to compare
+	4. return value
+		0 - if both string are equal
+		greater than 0 - if string1 is less than string2
+		less than 0 - if string1 is greater than string2
+	5. example
+			<?php
+				echo strcmp("hello" , "world") ;
+			?>
